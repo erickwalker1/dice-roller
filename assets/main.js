@@ -8,6 +8,8 @@ const totalRolls = document.querySelector('#total-rolls')
 
 const orderList = document.querySelector('#all-rows-order-list')
 
+const resetButton = document.querySelector('#reset-button')
+
 const dieRolls = []
 
 
@@ -42,3 +44,24 @@ rollButton.addEventListener('click', function(){
          orderList.appendChild(li);
      }
  })
+
+ resetButton.addEventListener('click', function(){
+
+     document.querySelector('#total-rolls').textContent = '0';
+
+     dieRolls.length = '0';
+
+     orderList.innerHTML = '';
+
+ })
+
+
+ /* LESSONS LEARNED THIS PROJECT:
+
+ - .REDUCE ~ OUTPUTS THE TOTAL VALUE OR SUM OF AN ARRAY
+
+ - SPECIFY THE SPECIFIC VALUE OR INDEX IN AN ARRAY USING [i]
+
+ - CREATING AN ELEMENT VIA JAVASCRIPT USING .createElement()
+
+ - appendCHILD & createTextNode ~ RESEARCH MORE ON BOTH TOPICS */
